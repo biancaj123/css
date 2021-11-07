@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+<style>  
+
+  p {
+  text-align: center;
+  font-family: Arial;
+  font-size: 24px;
+  color: hsla(213, 23%, 51%,1);
+    }
+
+  table, td, th {
+    border: 1px solid rgb(240,200,300); 
+    padding-top: 15px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 60%;
+    height: 60%;
+        }
+
+  th,td,tr {
+    text-align: left;
+    height: 35px;
+    color: hsla(213, 23%, 51%,1);
+    font-family: calibri;
+    padding-left: 7px;
+    font-size: 18px;
+      }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+        }
+  .right {
+    position: absolute;
+    right: 190px;
+  }
+  .pagination a 
+      {
+      font-size: 16px;
+      float: left;
+      text-align: right;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: hsla(213, 23%, 51%,1);
+          }
+  .pagination a.active {
+    background-color:dodgerblue;
+    width: 0px;
+    height: 17px;  
+    border-radius: 100%;
+    color: #ffffff;
+    }
+  
+    a:link {
+      text-decoration: none; font-family: calibri;
+      }
+
+  span.y{  
+    color:yellow;
+   }
+  span.db{
+    color: dodgerblue; 
+  }
+  span.r{
+    color: red;
+  }
+
+  @media (max-width: 900px) 
+      {
+    div {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-right: 0px;
+      margin-left: 0px;;
+      width: auto;
+        }
+       }
+
+  span.S{
+    font-family: Arial;
+    font-size: 14px;
+    color: hsla(213, 23%, 51%,1);
+    padding-left:270px;
+  }
+
+    span.s {
+     position: relative;
+     top: 70px;
+      font-family: Arial;
+      font-size: 17px;
+      color: hsla(213, 23%, 51%,1);
+      padding-left:270px;
+      width:100%;
+      
+  }
+
+  span.se{
+    color: solid rgb(240,200,300);
+  }
+
+  .select-items  {
+      position: relative;
+      top: 60px;
+      left:600px;
+      width:200px;
+      color: #ffffff;
+      border: 1px solid rgb(240,200,300);
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+    }
+
+     span.s1
+      {   
+      border: none;
+      outline: none; 
+       position: relative;
+       top: 70px;
+      font-family: Arial;
+      font-size: 17px;
+      padding-left:470px;
+      width:100%;
+      color: hsla(213, 23%, 51%,1);
+    }
+
+    span.s2
+    {
+    border:0px;
+    outline: none; 
+    color: hsla(213, 23%, 51%,1); 
+    }
+  
+    .button {
+     border: none;
+     outline: none;
+     cursor:pointer;
+     background-color: Transparent;
+     background-repeat:no-repeat;
+      }
+
+    span.bc {
+      color: hsla(213, 23%, 51%,1);
+      size: 10px;
+    }
+    input {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        position:relative;
+        border-color: hsla(213, 23%, 51%,1);
+      }
+      
+      .no-outline:focus {
+        outline: none; 
+        color: hsla(213, 23%, 51%,1);
+      }
+
+      select {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        position:relative;
+        border-color: hsla(213, 23%, 51%,1);
+      }
+
+  </style>
+  </head>
+
+  <body>
+
+  <span class="s">Show 
+  		<select id="num" name="num" class="no-outline" width="100%">
+ 	    	<option value="1">1</option>
+ 	    	<option value="2">2</option>
+ 	    	<option value="3">3</option>
+ 	    	<option value="4">4</option>
+ 	    	<option value="5">5</option>
+ 	    </select>entries</span>
+ 
+  <span class="s1">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+      <input type="text" class="no-outline" placeholder="Search..."></i>
+  </span>
+
+  <p>Customer <b>Details</b></p>
+  
+  <table class="center" id="myTable1">
+    <tr>
+      <th width="30px">#</th>
+      <th>Name<button class="button" onclick="sortTable1(0)"><span class="bc"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16"><path fill="currentColor" d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"></path></svg></button></th></span>
+
+      <th>Address</th>
+
+      <th>City<button class="button" onclick="sortTable1(1)"><span class="bc"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16"><path fill="currentColor" d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"></path></svg></span></button></th>
+
+      <th>Pin Code</th>
+
+      <th>Country<button class="button" onclick="sortTable1(2)"><span class="bc"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16"><path fill="currentColor" d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"></path></svg></span></button></th>
+
+      <th>Actions</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Thomas Hardy</td>
+      <td>89 Chiaroscuro Rd.</td>
+      <td>Portland</td>
+      <td>97219</td>
+      <td>USA</td>
+      <td><span class="db"><i class="fa fa-eye"></i></span>
+        <span class="y"><i class="fa fa-pencil"></i></span>
+        <span class="r"><i class="fa fa-trash"></i></span></td>     
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>MariaAnders</td>
+      <td>Obere Str,57</td>
+      <td>Berlin</td>
+      <td>12209</td>
+      <td>Germany</td>
+      <td><span class="db"><i class="fa fa-eye"></i></span>
+        <span class="y"><i class="fa fa-pencil"></i></span>
+        <span class="r"><i class="fa fa-trash"></i></span></td>
+    </tr>
+
+     <tr>
+      <td>3</td>
+      <td>Fran Wilson</td>
+      <td>C/ Araquil,67</td>
+      <td>Madrid</td>
+      <td>28023</td>
+      <td>Spain</td>
+      <td><span class="db"><i class="fa fa-eye"></i></span>
+        <span class="y"><i class="fa fa-pencil"></i></span>
+        <span class="r"><i class="fa fa-trash"></i></span></td>
+    </tr>
+
+     <tr>
+      <td>4</td>
+      <td>Dominique Perrier</td>
+      <td>25,rue Lauriston</td>
+      <td>Paris</td>
+      <td>75016</td>
+      <td>France</td>
+      <td><span class="db"><i class="fa fa-eye"></i></span>
+        <span class="y"><i class="fa fa-pencil"></i></span>
+        <span class="r"><i class="fa fa-trash"></i></span></td>
+    </tr>
+
+     <tr>
+      <td>5</td>
+      <td>Martin Blank</td>
+      <td>Via Monte Bianco 34 </td>
+      <td>Turin</td>
+      <td>10100</td>
+      <td>Italy</td>
+      <td><span class="db"><i class="fa fa-eye"></i></span>
+        <span class="y"><i class="fa fa-pencil"></i></span>
+        <span class="r"><i class="fa fa-trash"></i></span></td>
+    </tr>
+
+  </table>
+
+  <script>
+  function sortTable1(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable1");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+        }
+      }
+    }
+  }
+    </script>
+
+<br>
+    <div class="right">
+    <div class="pagination">
+    <a href="#">Previous</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a class = "active" href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">Next</a>
+    </div></div>
+  <span class="S">Showing <b>5</b> out of <b>25</b> entries</span>
+
+</body>
+</html>

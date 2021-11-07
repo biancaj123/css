@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	  /*font-family: Sans-serif;*/
+	  color: white;
+  	  margin: 0;
+  	  font-weight:200;
+  	  font-family: calibri;
+  
+		}
+
+	img {  
+		max-width: 18%;  
+		height: auto; 
+		position: relative;
+		top: -70px; 
+		}
+
+	.split {
+	  height: 100%;
+	  position: fixed;
+	  z-index: 1;
+	  top: 40px;
+	  overflow-x: hidden;
+	  padding-top: 20px;
+
+	}
+
+	.left {
+	  left: 0;
+	  background-color:#151b26;
+	  width: 60%;
+	  text-shadow: 2px #ffffff;
+	  
+	}
+
+	.lstyle{
+		padding-left: 50px;
+		padding-top: 100px;
+	}
+
+	.right {
+	  right: 0;
+	  background-color:#25a57a;
+	  width: 40%;
+	}
+
+	.topnav {
+	  overflow: hidden;
+	  background-color: whitesmoke;
+	}
+
+	.topnav a {
+	  float: left;
+	  color: grey;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  font-size: 17px;
+	}
+
+	.r{  
+		color:red;  
+		font-size:10px;   
+		}
+	.y{  
+		color:yellow;  
+		font-size:10px;   
+		}
+	.g{  
+		color:mediumspringgreen;  
+		font-size:10px;   
+		}
+
+	.bc{
+		background-color:#25a57a;
+		font-size: 14px;
+		border: none;
+  		color: white;
+  		padding: 12px 19px;
+  		font-family:Lucida Console;
+  		letter-spacing: 2px;
+  		position: relative;
+  		top: 30px;
+	}
+
+	select {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: hidden;
+        position:relative;
+        border-color:#151b26;
+        background-color:#151b26;
+      }
+    .no-outline:focus {
+        outline: none; 
+       background-color:#151b26;
+  		}
+
+  	span.s {
+     position: relative;
+     top: 120px;
+     font-size: 12px;
+     background-color:#151b26;  
+     letter-spacing: 2px;
+     left: -130px;
+  	}
+
+
+	.blk{
+		position: relative;
+		font-size:13px;
+		color:darkgray;
+		opacity: 0.5;
+		line-height:1.6;
+		}
+
+	.blk2{
+		font-size:22px; 
+		color:darkgray;
+		opacity: 0.5;
+		top: 50px;
+	}
+
+	span.blk1{
+			font-size:12px;
+			color:darkgray;
+			opacity: 0.5;
+			padding-left: 50px;
+		}
+
+	.blk5{
+		padding-left: 70px; 
+		padding-top: 180px;
+		font-size:35px;
+		font-family:calibri;
+		font-weight: 70;
+		opacity: 0.9;
+		}
+
+	input {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        position:relative;
+        border-color:white;
+        background-color:#25a57a;
+        height:44px;
+        width:300px;
+        opacity: 0.6;
+        top:20px;
+
+      }
+
+	.no-outline1:focus {
+        outline: none; 
+        background-color:#25a57a;
+       
+  	}
+
+  	.blk4{
+		font-size:14px;
+		color:#ffffff;
+		padding-left: 70px;
+		background-color:#25a57a;
+		opacity: 0.9;
+	}
+
+	.bc1{
+		position: relative;
+		background-color:#ffffff;
+		font-size: 12px;
+		border: none;
+  		color:#25a57a;
+  		padding: 12px 19px;
+  		font-family:Lucida Console;
+  		letter-spacing: 1px;
+  		top:50px;
+  		left:70px;
+	}
+
+	.fp{
+		position: relative;
+		top:50px;
+  		left:100px;
+  		opacity: 0.6;
+  		font-size: 13px;
+	}
+
+	@media (max-width: 900px) 
+		{
+        div {
+            margin-top: 0px;
+			margin-bottom: 0px;
+		    margin-right: 0px;
+		    margin-left: 0px;;
+            width: auto;
+        }
+     }
+
+    input::-webkit-input-placeholder
+     {
+    color:white;
+	}
+
+	</style>
+	</head>
+
+	<body>
+		<div class="topnav">
+		  <a class="active" href="#home"><div class="r"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+ 		 <circle cx="8" cy="8" r="8"/></svg></div></a>
+
+		  <a href="#news"><div class="y"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+ 		 <circle cx="8" cy="8" r="8"/></svg></div></a>
+
+		  <a href="#contact"><div class="g"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+ 		 <circle cx="8" cy="8" r="8"/></svg></div></a>
+		  
+		</div>
+		  
+		<div class="split left lstyle">
+
+		  <a href="https://cosy.erc.edu/en" class="unauthorized-logo" title="ERC">
+          <img style="display: inline-block;" src="https://cosy.erc.edu/assets/my-erc/img/logo-white.png" alt="ERC" /></a>
+		  
+		    <p style="font-size:50px;">Welcome
+		    <p style="font-size:22px; color:darkgray;">Register for an ERC account here</p></p>
+		    <p style="font-size:13px;color:darkgray;">Register for free ERC account here and get access to webshop accademy and my ERC membership <br>portal. Nations of life-savers, communities with the readiness to respond to cardiac arrest. This is <br> the vision of the future. The goal of the ERC. To achieve this, we need training and education. To know <br> what to teach we need guidelines. To have good evidence-based guidelines, we need science. And for <br> all this we need motivated people ready to change hearts and minds. Ready to research, educate and act.</p>
+
+	    <a href="https://cosy.erc.edu/">
+		<button type="button" class="bc" style="font-size:10px;">REGISTER HERE</button></a>
+
+		    <span class="s">
+  		<select id="num" name="num" class="no-outline blk" >
+ 	    	<option value="1">CHOOSE LANGUAGE</option>
+ 	    	<option value="2">2</option>
+ 	    	<option value="3">3</option>
+ 	    	<option value="4">4</option>
+ 	    	<option value="5">5</option>
+ 	    </select></span>
+ 	    <span class="s blk1">HELP CENTER </span>
+ 	    <span class="s blk1">ERC WEBSITE </span>
+ 	    <span class="s blk1">ERC WEBSHOP</span>
+		  </div>
+
+		<div class="split right">
+		 
+		    <p class="blk5">Or login to your account</p>
+		 
+		    <form method="post" enctype="multipart/form-data" class="no-outline blk4">
+			<input type="text" id="name" name="name"  placeholder="Your email"><br>
+			<input type="password" name="password" placeholder="Password"><br>
+			
+		</form>
+
+	<span><button type="button" class="bc1">LOGIN</button></span>
+	<span class="fp" >Forgot Password?</span>
+
+	 </div>
+
+</body>
+</html> 

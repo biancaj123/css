@@ -1,0 +1,41 @@
+
+
+    	body {
+		  background-color: #f0f0f2;
+		}
+
+    	h1{font-family: calibri; font-size: 38px;}
+
+    	p{font-family: sans-serif; font-size: 17px;}
+
+		div {
+		  border: 1px white;
+		  border-radius: 8px;
+		  margin-top: 90px;
+		  margin-bottom: 100px;
+		  margin-right: 343px;
+		  margin-left: 340px;
+		  background-color: white;
+		  padding-top: 30px;
+		  padding-left: 35px;
+		  padding-right: 20px;
+		  padding-bottom: 45px;
+		  box-shadow: 5px #787878;
+			}
+
+		a:link {
+		  text-decoration: none; font-family: calibri; font-size: 20px; color: mediumblue;
+			}
+
+		@media (max-width: 900px) 
+		{
+        div {
+            margin-top: 0px;
+			margin-bottom: 0px;
+		    margin-right: 0px;
+		    margin-left: 0px;;
+            width: auto;
+        }
+   		 }
+
+
